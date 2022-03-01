@@ -1,0 +1,139 @@
+.banner-contents{
+    position : relative;
+    text-align: center;
+}
+
+.banner-texts{
+    position:absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#f4f4f4;
+    backdrop-filter: blur(1px);
+}
+
+
+/*청춘그라운드는 ~~ font size 반응형 아직 적용 안함*/
+
+/* 모바일: 0 ~ 640 */
+@media screen and (max-width: 640px){
+    h1{
+        font-size : 20.3px !important;
+        line-height: 1.7 ! important;
+        text-shadow: 3px 3px 4px rgb(22, 22, 22);
+    }
+    .storeLogo{
+        width : 140px;
+        margin: 15px 20px -60px;
+        border-radius: 10px;
+        border-color: white;
+        border: 1px solid white;
+    }
+}
+
+/* 태블릿 : 641 ~ 1023 */
+@media screen and (min-width: 641px){
+    h1{
+        font-size : 26.3px !important;
+        line-height: 1.5 ! important;
+        text-shadow: 3px 3px 4px rgb(22, 22, 22);
+    }
+    .storeLogo{
+        width : 180px;
+        margin: 45px 20px;
+        border-radius: 14px;
+        border-color: white;
+        border: 1px solid white;
+    }
+}
+
+/* 데스크탑 : 1024 ~ */
+@media screen and (min-width: 1024px){
+    h1{
+        font-size: 40px !important;
+        line-height : 1.5 !important;
+        text-shadow: 3px 3px 4px rgb(22, 22, 22);
+    }
+    .storeLogo{
+        width : 230px;
+        margin: 45px 20px;
+        border-radius: 16px;
+        border-color: white;
+        border: 1px solid white;
+    }
+}
+
+.brand-exp {
+    width : 100%;
+    filter: brightness(30%);
+  }
+
+.app-link{
+    display:flex;
+    justify-content: center;
+}
+
+.container-storeLogo{
+    display:flex;
+}
+
+.contents{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(223, 222, 222);
+}
+
+.more{
+    color: rgb(94, 94, 94);
+}
+
+.content-items{
+    width: 400px;
+    height : 250px;
+    margin : 20px auto;
+    justify-content: center;
+    background-color: skyblue;
+    border-radius: 5%;
+    box-shadow: 3px 3px 10px rgb(95, 95, 95);
+}
+.review{
+    display: flex inline;
+    text-align: center;
+}
+
+.review-items{
+    width: 350px;
+    height: 350px;
+    margin: 10px;
+    background-color: pink;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 5%;
+}
+.product {
+    display: flex;
+    padding: 10px;
+  }
+.thumbnail {
+    max-width: 200px;
+    width: 100%;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+.product .price {
+    font-size: 16px;
+    font-weight: 600;
+}
+.product .title {
+    font-size: 17px;
+    font-weight: 600;
+}
+.product .date {
+    color: grey;
+    font-size: 13px;
+}
+
+
