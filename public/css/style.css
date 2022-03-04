@@ -135,5 +135,8 @@
     color: grey;
     font-size: 13px;
 }
-
+.logoImage {
+    width : 100px;
+    height : 50px;
+}
 
