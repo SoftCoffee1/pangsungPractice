@@ -1,6 +1,6 @@
 .modal-btn{
     color : #f4f4f4;
-    background-color : rgb(98, 37, 212);
+    background-color : rgb(83, 57, 231);
     width : 100px;
     padding : 6px 12px 6px;
     border-radius : 15px;
@@ -8,9 +8,16 @@
     cursor : pointer;
 }
 
+.red{
+    color : red;
+}
+
+.modal-logo{
+    width : 30%;
+}
 .modal-footer-btn{
     color : #f4f4f4;
-    background-color : rgb(98, 37, 212);
+    background-color : rgb(83, 57, 231);
     width : 100px;
     padding : 6px 12px 6px;
     border-radius : 15px;
@@ -29,19 +36,35 @@
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.5);
   }
+
+  .modal-header{
+      border-top-left-radius: 40px;
+      border-top-right-radius : 40px;
+      font-weight : bold;
+      font-size : 2rem;
+      color : #f4f4f4;
+      background-color :rgb(49, 48, 48) !important;
+  }
+
+  .modal-footer{
+      border-bottom-left-radius : 40px;
+      border-bottom-right-radius : 40px;
+  }
   .modal-content, .modal-header, .modal-footer {
     position: relative; 
     background-color: white;
-    padding: 20px; 
     margin: auto; 
-    width: 75%;  
+    padding : 30px;
+    width: 40%;  
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s
   }
   .close-btn {
-    float: right; 
+    position : absolute;
+    top : 10px;
+    right : 20px;
     color: lightgray; 
     font-size: 24px;  
     font-weight: bold;
