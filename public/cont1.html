@@ -17,16 +17,48 @@
         </div>
         <div class="modal-content">
             <div> 이름 <span class="red">*</span></div>
-            <input type="text">
+            <input type="text" id = "name">
             <div> 연락처 <span class="red">*</span></div>
-            <input type="text">
+            <input type="text" id = "phone">
             <div> 거주지역 <span class="red">*</span></div>
-            <input type="text">
+            <input type="text" id = "area">
         </div>
         <div class="modal-footer">
-          <div class="modal-footer-btn">신청하기</div>
+          <button class="modal-footer-btn" id = 'send'>신청하기</button>
         </div>
     </div>
       <script src="modal.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script>
+
+        var firebaseConfig = {
+          apiKey: "AIzaSyALEgtSZiXrvHyxF1b1QWVV0If4idGfQOE",
+          authDomain: "protoc-d8bec.firebaseapp.com",
+          projectId: "protoc-d8bec",
+          
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+      </script>
+      <script>
+            const db = firebase.firestore();
+                
+                $('#send').click(function(){
+
+                    var save = { 
+                        '이름' : $('#name').val(),
+                        '연락처' : $('#phone').val(),
+                        '거주지역' : $('#area').val(),
+                    }
+                    db.collection('applyList').add(save)
+                })
+      </script>
 </body>
 </html>
